@@ -36,7 +36,7 @@ pipeline {
                 sh 'python --version'
                 // sh 'python -m pip install --upgrade pip'
                 sh 'pip list'
-                sh 'pip install pyinstaller'
+                sh 'pip install --upgrade pyinstaller'
                 sh 'pyinstaller --version'
                 sh 'pyinstaller --onefile sources/add2vals.py' 
             }
