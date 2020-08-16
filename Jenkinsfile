@@ -29,12 +29,12 @@ pipeline {
         stage('Deliver') { 
             agent {
                 docker {
-                    image 'cdrx/pyinstaller-linux:python2' 
+                    image 'suranagivinod/python' 
                 }
             }
             steps {
                 sh 'python --version'
-                sh 'python -m pip install --upgrade pip'
+                // sh 'python -m pip install --upgrade pip'
                 sh 'pip list'
                 // sh 'pyinstaller --version'
                 // sh 'pyinstaller --onefile sources/add2vals.py' 
