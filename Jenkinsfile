@@ -34,6 +34,7 @@ pipeline {
             }
             steps {
                 sh 'python --version'
+                sh 'python -m pip install --upgrade pip'
                 sh 'pip list'
                 // sh 'pyinstaller --version'
                 // sh 'pyinstaller --onefile sources/add2vals.py' 
