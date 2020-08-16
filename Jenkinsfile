@@ -34,8 +34,8 @@ pipeline {
             }
             steps {
                 sh 'python --version'
-                sh 'pip install https://github.com/pyinstaller/pyinstaller/tarball/develop'
-                sh 'pyinstaller --version'
+                sh 'pip list'
+                // sh 'pyinstaller --version'
                 // sh 'pyinstaller --onefile sources/add2vals.py' 
             }
             post {
