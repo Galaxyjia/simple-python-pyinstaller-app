@@ -29,7 +29,7 @@ pipeline {
         stage('Deliver') { 
             agent {
                 docker {
-                    image 'suranagivinod/python' 
+                    image 'python:2-alpine' 
                 }
             }
             steps {
