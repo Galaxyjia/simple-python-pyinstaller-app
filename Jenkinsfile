@@ -9,7 +9,7 @@ pipeline {
             }
             steps {
                 sh 'python --version'
-                sh 'pip install -r requirements.txt'
+                sh 'pip install -r https://pypi.tuna.tsinghua.edu.cn/simple requirements.txt'
                 sh 'python manage.py runserver'
             }
         }
