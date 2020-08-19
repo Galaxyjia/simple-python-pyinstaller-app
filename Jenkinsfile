@@ -11,7 +11,8 @@ pipeline {
                 }
             }
             steps {
-                sh 'jenkins/scripts/initial.sh' 
+                sh 'echo build'
+                sh './jenkins/scripts/initial.sh' 
                 sh 'pip install -r requirements.txt'
                 sh 'python manage.py runserver 0.0.0.0:48080'
             }
