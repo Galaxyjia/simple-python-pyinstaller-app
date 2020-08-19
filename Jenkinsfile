@@ -8,15 +8,10 @@ pipeline {
                 }
             }
             steps {
-                sh 'python --version'
-                sh 'pwd'
-                sh 'ls'
-                sh 'pip config set global.index-url https://mirrors.aliyun.com/pypi/simple'
-                sh 'pip install --upgrade pip'
+                sh 'jenkins/scripts/initial.sh' 
                 sh 'pip install -r requirements.txt'
                 sh 'python manage.py runserver 0.0.0.0:48080'
             }
         }
-        
     }
 }
