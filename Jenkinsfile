@@ -4,6 +4,12 @@ pipeline {
         CI = 'true' 
     }
     stages {
+        stage('Initial') {
+            steps {
+                sh 'echo build'
+                sh './jenkins/scripts/initial.sh' 
+            }
+        }
         stage('Build') {
             agent {
                 docker {
@@ -11,8 +17,6 @@ pipeline {
                 }
             }
             steps {
-                sh 'echo build'
-                sh './jenkins/scripts/initial.sh' 
                 sh 'pip install -r requirements.txt'
                 sh 'python manage.py runserver 0.0.0.0:48080'
             }
