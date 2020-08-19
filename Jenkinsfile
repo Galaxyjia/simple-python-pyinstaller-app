@@ -10,7 +10,8 @@ pipeline {
             steps {
                 sh 'python --version'
                 sh 'pip install --upgrade pip'
-                sh 'pip install -i https://pypi.tuna.tsinghua.edu.cn/simple django'
+                sh 'pip config set global.index-url https://mirrors.aliyun.com/pypi/simple'
+                sh 'pip install -r requirements.txt'
                 sh 'python manage.py runserver'
             }
         }
