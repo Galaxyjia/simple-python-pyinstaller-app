@@ -4,47 +4,13 @@ pipeline {
         stage('Build') {
             agent {
                 docker {
-                    image 'python:2-alpine'
-                }
-            }
-            steps {
-                sh 'python -m py_compile sources/add2vals.py sources/calc.py'
-            }
-        }
-        stage('Test') {
-            agent {
-                docker {
-                    image 'qnib/pytest'
-                }
-            }
-            steps {
-                sh 'py.test --verbose --junit-xml test-reports/results.xml sources/test_calc.py'
-            }
-            post {
-                always {
-                    junit 'test-reports/results.xml'
-                }
-            }
-        }
-        stage('Deliver') { 
-            agent {
-                docker {
-                    image 'python:2-alpine' 
+                    image 'fairwaydigital/python3.6.8-gdal'
                 }
             }
             steps {
                 sh 'python --version'
-                // sh 'python -m pip install --upgrade pip'
-                sh 'pip list'
-                sh 'pip install --upgrade pyinstaller3.3'
-                sh 'pyinstaller --version'
-                sh 'pyinstaller --onefile sources/add2vals.py' 
-            }
-            post {
-                success {
-                    archiveArtifacts 'dist/add2vals' 
-                }
             }
         }
+        
     }
 }
