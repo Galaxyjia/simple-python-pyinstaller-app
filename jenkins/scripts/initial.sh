@@ -7,7 +7,6 @@ echo '[当前目录结构]'
 
 set -x
 python --version
-ls
 
 echo '[设置pip镜像源为阿里云]'
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
