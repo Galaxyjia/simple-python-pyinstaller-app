@@ -37,6 +37,7 @@ pipeline {
                 echo "[EXECUTOR_NUMBER]    : ${env.EXECUTOR_NUMBER}"
                 echo "[NODE_NAME]          : ${env.NODE_NAME}"
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
+                sh './jenkins/scripts/initial.sh'
                 // sh 'echo "Test"' 
                 // sh 'pwd'
                 // sh 'ls'
