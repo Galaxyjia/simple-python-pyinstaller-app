@@ -13,7 +13,7 @@ pipeline {
                 sh 'pip config set global.index-url https://mirrors.aliyun.com/pypi/simple'
                 sh 'pip install --upgrade pip'
                 sh 'pip install -r requirements.txt'
-                sh 'python manage.py runserver'
+                sh 'python manage.py runserver 0.0.0.0:48080'
             }
         }
         
