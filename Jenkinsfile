@@ -9,6 +9,7 @@ pipeline {
             }
             steps {
                 sh 'python --version'
+                sh 'pwd'
                 sh 'ls'
                 sh 'pip config set global.index-url https://mirrors.aliyun.com/pypi/simple'
                 sh 'pip install --upgrade pip'
