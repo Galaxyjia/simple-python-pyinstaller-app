@@ -9,7 +9,8 @@ pipeline {
             }
             steps {
                 sh 'python --version'
-                sh 'pip install -r https://pypi.tuna.tsinghua.edu.cn/simple requirements.txt'
+                sh 'pip install --upgrade pip'
+                sh 'pip install -i https://pypi.tuna.tsinghua.edu.cn/simple django'
                 sh 'python manage.py runserver'
             }
         }
