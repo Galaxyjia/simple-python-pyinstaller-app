@@ -16,11 +16,11 @@ pipeline {
                 echo "[BUILD_ID]           : ${env.BUILD_ID}"
                 echo "[BUILD_NUMBER]       : ${env.BUILD_NUMBER}"
                 echo "[BUILD_DISPLAY_NAME] : ${env.BUILD_DISPLAY_NAME}"
-                sh 'yarn install' 
-                // sh './jenkins/scripts/test.sh' 
-                sh './jenkins/scripts/deliver-for-development.sh' 
-                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
-                sh './jenkins/scripts/kill.sh' 
+                // sh 'yarn install' 
+                sh './jenkins/scripts/test.sh' 
+                // sh './jenkins/scripts/deliver-for-development.sh' 
+                // input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+                // sh './jenkins/scripts/kill.sh' 
             }
         }
         stage('Test') { 
@@ -37,15 +37,15 @@ pipeline {
                 echo "[EXECUTOR_NUMBER]    : ${env.EXECUTOR_NUMBER}"
                 echo "[NODE_NAME]          : ${env.NODE_NAME}"
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
-                sh 'echo "Test"' 
-                sh 'pwd'
-                sh 'ls'
-                sh 'pip install pytest allure-pytest'
-                sh 'pytest'
-                sh "py.test ./Testsuite --alluredir=./allure-results"
-                sh 'ls'
-                sh 'ls allure-results'
-                sh 'ls'
+                // sh 'echo "Test"' 
+                // sh 'pwd'
+                // sh 'ls'
+                // sh 'pip install pytest allure-pytest'
+                // sh 'pytest'
+                // sh "py.test ./Testsuite --alluredir=./allure-results"
+                // sh 'ls'
+                // sh 'ls allure-results'
+                // sh 'ls'
             }
         }
         stage('PushWechat') {
