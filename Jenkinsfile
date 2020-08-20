@@ -26,7 +26,7 @@ pipeline {
         stage('Test') { 
             agent {
                 docker {
-                    image 'python:3.6'
+                    image 'fairwaydigital/python3.6.8-gdal'
                 }
             }
             steps {
@@ -38,15 +38,7 @@ pipeline {
                 echo "[NODE_NAME]          : ${env.NODE_NAME}"
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
                 sh './jenkins/scripts/test2.sh'
-                // sh 'echo "Test"' 
-                // sh 'pwd'
-                // sh 'ls'
-                // sh 'pip install pytest allure-pytest'
-                // sh 'pytest'
-                // sh "py.test ./Testsuite --alluredir=./allure-results"
-                // sh 'ls'
-                // sh 'ls allure-results'
-                // sh 'ls'
+                
             }
         }
         stage('PushWechat') {
