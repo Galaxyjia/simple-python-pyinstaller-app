@@ -38,7 +38,7 @@ pipeline {
                 echo "[NODE_NAME]          : ${env.NODE_NAME}"
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
                 sh './jenkins/scripts/python-start.sh'
-                sh './jenkins/scripts/python-runserver.sh'
+                // sh './jenkins/scripts/python-runserver.sh'
                 
                 
             }
