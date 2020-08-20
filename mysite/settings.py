@@ -204,3 +204,5 @@ SIMPLEUI_ICON = {
 # 不填该项或者为False的时候，默认从第三方的cdn获取
 
 SIMPLEUI_STATIC_OFFLINE = False
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
