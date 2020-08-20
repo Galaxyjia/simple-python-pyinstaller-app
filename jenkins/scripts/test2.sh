@@ -17,6 +17,12 @@ python --version
 pip config set global.index-url https://mirrors.aliyun.com/pypi/simple
 
 pip install --upgrade pip
+
+pip install -r requirements.txt
+
+python manage.py runserver 0.0.0.0:48080
+
+
 echo 'The following "npm" command tests that your simple Node.js/React'
 echo 'application renders satisfactorily. This command actually invokes the test'
 echo 'runner Jest (https://facebook.github.io/jest/).'
