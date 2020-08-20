@@ -8,7 +8,7 @@ python --version
 
 pip3 list
 
-python manage.py runserver 0.0.0.0:48080
+python manage.py runserver 0.0.0.0:8000
 
 echo 'The following "npm" command tests that your simple Node.js/React'
 echo 'application renders satisfactorily. This command actually invokes the test'
