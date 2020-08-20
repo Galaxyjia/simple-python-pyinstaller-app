@@ -203,6 +203,6 @@ SIMPLEUI_ICON = {
 # 指定simpleui 是否以脱机模式加载静态资源，为True的时候将默认从本地读取所有资源，即使没有联网一样可以。适合内网项目
 # 不填该项或者为False的时候，默认从第三方的cdn获取
 
-SIMPLEUI_STATIC_OFFLINE = False
+SIMPLEUI_STATIC_OFFLINE = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
