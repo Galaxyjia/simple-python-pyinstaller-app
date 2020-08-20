@@ -27,6 +27,7 @@ pipeline {
             agent {
                 docker {
                     image 'fairwaydigital/python3.6.8-gdal'
+                    args '-p 8000:8000'
                 }
             }
             steps {
