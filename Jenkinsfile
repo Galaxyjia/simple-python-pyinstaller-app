@@ -37,6 +37,7 @@ pipeline {
                 echo "[EXECUTOR_NUMBER]    : ${env.EXECUTOR_NUMBER}"
                 echo "[NODE_NAME]          : ${env.NODE_NAME}"
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
+                BUILD_ID=DONTKILLME
                 sh './jenkins/scripts/python-start.sh'
                 // sh './jenkins/scripts/python-runserver.sh'
                 
