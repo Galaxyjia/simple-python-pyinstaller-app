@@ -208,4 +208,4 @@ SIMPLEUI_HOME_ACTION = False
 
 # SIMPLEUI_STATIC_OFFLINE = True
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
