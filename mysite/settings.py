@@ -124,6 +124,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
+
 # simpleui 设置
 
 # 首页配置
@@ -207,5 +209,3 @@ SIMPLEUI_HOME_ACTION = False
 # # 不填该项或者为False的时候，默认从第三方的cdn获取
 
 # SIMPLEUI_STATIC_OFFLINE = True
-
-STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
