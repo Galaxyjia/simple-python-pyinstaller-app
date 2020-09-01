@@ -15,6 +15,7 @@ pip3 install Django
 # pip3 install django-simpleui
 
 # pip3 install -r requirements.txt
+pip3 list
 
 python manage.py runserver 0.0.0.0:8000
 
