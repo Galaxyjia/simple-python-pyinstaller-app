@@ -4,25 +4,25 @@ pipeline {
         CI = 'true' 
     }
     stages {
-        stage('Build') {
-            agent {
-                docker {
-                    image 'node:latest' 
-                    args '-p 3000:3000' 
-                }
-            }
-            steps {
-                sh 'echo Build stage ...' 
-                echo "[BUILD_ID]           : ${env.BUILD_ID}"
-                echo "[BUILD_NUMBER]       : ${env.BUILD_NUMBER}"
-                echo "[BUILD_DISPLAY_NAME] : ${env.BUILD_DISPLAY_NAME}"
-                // sh 'yarn install' 
-                sh './jenkins/scripts/test.sh' 
-                // sh './jenkins/scripts/deliver-for-development.sh' 
-                // input message: 'Finished using the web site? (Click "Proceed" to continue)' 
-                // sh './jenkins/scripts/kill.sh' 
-            }
-        }
+        // stage('Build') {
+        //     agent {
+        //         docker {
+        //             image 'node:latest' 
+        //             args '-p 3000:3000' 
+        //         }
+        //     }
+        //     steps {
+        //         sh 'echo Build stage ...' 
+        //         echo "[BUILD_ID]           : ${env.BUILD_ID}"
+        //         echo "[BUILD_NUMBER]       : ${env.BUILD_NUMBER}"
+        //         echo "[BUILD_DISPLAY_NAME] : ${env.BUILD_DISPLAY_NAME}"
+        //         // sh 'yarn install' 
+        //         sh './jenkins/scripts/test.sh' 
+        //         // sh './jenkins/scripts/deliver-for-development.sh' 
+        //         // input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+        //         // sh './jenkins/scripts/kill.sh' 
+        //     }
+        // }
         stage('Test') { 
             agent {
                 docker {

@@ -18,6 +18,7 @@ from django.urls import path
 from django.contrib.staticfiles.views import serve
 from django.urls import re_path
 
+# 配置静态文件访问函数
 def return_static(request, path, insecure=True, **kwargs):
   return serve(request, path, insecure, **kwargs)
  
