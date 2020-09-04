@@ -40,7 +40,8 @@ pipeline {
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
                 sh "pwd"
                 sh 'JENKINS_NODE_COOKIE=dontKillMe ./jenkins/scripts/python-start.sh'
-                // sh './jenkins/scripts/python-runserver.sh'
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh './jenkins/scripts/kill.sh'
                 
                 
             }

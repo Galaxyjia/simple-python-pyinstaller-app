@@ -19,7 +19,7 @@ pip3 list
 
 # BUILD_ID=DONTKILLME nohup python manage.py runserver 0.0.0.0:8000 &
 # BUILD_ID=DONTKILLME
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000 &
 sleep 1
 echo $! > .pidfile
 
