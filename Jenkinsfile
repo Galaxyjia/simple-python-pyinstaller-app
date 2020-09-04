@@ -39,7 +39,7 @@ pipeline {
                 echo "[NODE_NAME]          : ${env.NODE_NAME}"
                 echo "[NODE_LABELS]        : ${env.NODE_LABELS}"
                 sh "pwd"
-                sh './jenkins/scripts/python-start.sh'
+                sh 'JENKINS_NODE_COOKIE=dontKillMe ./jenkins/scripts/python-start.sh'
                 // sh './jenkins/scripts/python-runserver.sh'
                 
                 
