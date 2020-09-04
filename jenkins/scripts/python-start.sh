@@ -10,11 +10,12 @@ pip3 config set global.index-url https://mirrors.aliyun.com/pypi/simple
 
 pip3 install --upgrade pip
 
-pip3 install Django
+# pip3 install Django
 
-pip3 install django-simpleui
+# pip3 install django-simpleui
 
-# pip3 install -r requirements.txt
+pip3 install -r requirements.txt
+
 pip3 list
 
 # BUILD_ID=DONTKILLME nohup python manage.py runserver 0.0.0.0:8000 &
