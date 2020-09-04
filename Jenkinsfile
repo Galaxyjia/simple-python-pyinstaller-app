@@ -26,7 +26,8 @@ pipeline {
         stage('Test') { 
             agent {
                 docker {
-                    image 'fairwaydigital/python3.6.8-gdal'
+                    // image 'fairwaydigital/python3.6.8-gdal'
+                    image 'python:3.6'
                     args '-p 8000:8000'
                 }
             }
