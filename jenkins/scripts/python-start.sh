@@ -20,6 +20,10 @@ pip3 list
 
 # BUILD_ID=DONTKILLME nohup python manage.py runserver 0.0.0.0:8000 &
 # BUILD_ID=DONTKILLME
+pip config set global.index-url http://mirrors.aliyun.com/pypi/simple
+pip config set install.trusted-host mirrors.aliyun.com
+pip install -U pip
+
 python manage.py runserver 0.0.0.0:8000 &
 sleep 1
 echo $! > .pidfile
